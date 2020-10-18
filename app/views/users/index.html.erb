@@ -1,0 +1,16 @@
+<%= link_to 'ユーザー登録', new_user_path %>
+<%= link_to '戻る', root_path %>
+<table>
+    <tbody>
+        <% @user.each do |s| %>
+        <tr>
+            <td>
+                <%= s.uid %>
+            </td>
+            <td>
+                <%= link_to '削除', user_path(s.id), method: :delete %>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

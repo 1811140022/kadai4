@@ -24,7 +24,7 @@ class TopController < ApplicationController
             return false
         end
         
-        if aaa [:pass] == pass then
+        if BCrypt::Password.new(aaa.pass) == pass then
             return true
         end
         return false
